@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Student Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+  <header class="topbar">
+    <a class="brand" href="#" onclick="showPage('home');return false;"><span class="brand-mark">C</span> Campus<span>Connect</span></a>
+    <nav id="nav"></nav>
+  </header>
+  <main id="app">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR CAMPUS. YOUR FUTURE.</span>
+        <h1>Make your campus life <span>count.</span></h1>
+        <p>One connected place to manage your student journey, discover career opportunities and stay close to everything happening on campus.</p>
+        <div class="hero-actions"><button class="btn" onclick="showPage('register')">Create student account <span>→</span></button><button class="btn btn-light" onclick="showPage('login')">Sign in</button></div>
+        <div class="trust-line"><span>✓ Student profiles</span><span>✓ Career opportunities</span><span>✓ Campus updates</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="glow"></div><div class="hero-panel">
+          <div class="panel-top"><span class="live-dot"></span> YOUR CAMPUS AT A GLANCE <span>•••</span></div>
+          <div class="welcome-tile"><div><small>WELCOME TO YOUR NEXT CHAPTER</small><h3>Discover more.<br>Do more.</h3></div><div class="cap">🎓</div></div>
+          <div class="preview-stats"><div><b>01</b><small>Student hub</small></div><div><b>02</b><small>Opportunities</small></div><div><b>03</b><small>Campus events</small></div></div>
+          <div class="preview-row"><span class="preview-icon">✦</span><div><b>Find your next opportunity</b><small>Internships, jobs and more</small></div><span class="arrow">↗</span></div>
+          <div class="preview-row"><span class="preview-icon mint">⌁</span><div><b>Stay in the loop</b><small>Announcements and events</small></div><span class="arrow">↗</span></div>
+        </div><div class="floating-note">✦ &nbsp; Your future starts here</div>
+      </div>
+    </section>
+    <section class="feature-section"><div class="section-heading"><span class="eyebrow">ONE CAMPUS. MANY POSSIBILITIES.</span><h2>Everything students need,<br>all in one place.</h2></div><div class="feature-grid">
+      <article class="feature-card"><div class="feature-icon blue">♙</div><h3>Student management</h3><p>Keep your student profile and academic details organized.</p></article>
+      <article class="feature-card"><div class="feature-icon purple">↗</div><h3>Career opportunities</h3><p>Discover internships and jobs, then apply from the portal.</p></article>
+      <article class="feature-card"><div class="feature-icon green">▦</div><h3>Campus events</h3><p>Find workshops, activities and important announcements.</p></article>
+    </div></section>
+  </main>
+  <footer>© 2026 CampusConnect <span>Built to bring your campus together.</span></footer>
+  <script src="app.js"></script>
+</body></html>
