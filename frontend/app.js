@@ -37,7 +37,7 @@ function authPage(register=false) {
     <div class="field"><label>Password</label><input name="password" type="password" minlength="6" required placeholder="At least 6 characters"></div>
     <button class="btn" type="submit">${register?"Create account":"Sign in"} →</button></form>
     <p class="switch-auth">${register?"Already have an account?":"New to CampusConnect?"} <a onclick="showPage('${register?"login":"register"}')">${register?"Sign in":"Create an account"}</a></p>
-    ${register?"":`<p class="subtext" style="margin-top:18px">Demo admin: admin@campusconnect.com · Password: admin123</p>`}</div></section>`);
+    ${register?"":}</div></section>`);
   document.getElementById("auth-form").addEventListener("submit", async e=>{
     e.preventDefault();
     const form = Object.fromEntries(new FormData(e.target).entries());

@@ -4,7 +4,8 @@ from functools import wraps
 from flask import Flask, request, jsonify, session
 from werkzeug.security import generate_password_hash, check_password_hash
 
-app = Flask(__name__)
+FRONTEND = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "frontend")
+app = Flask(__name__, static_folder=FRONTEND, static_url_path="")
 app.secret_key = os.environ.get("CAMPUSCONNECT_SECRET", "change-this-demo-secret-before-deployment")
 app.config.update(
     SESSION_COOKIE_HTTPONLY=True,
@@ -117,6 +118,9 @@ def admin_required(fn):
             return jsonify({"error": "Administrator access required."}), 403
         return fn(*args, **kwargs)
     return wrapper
+@app.get("/")
+def home():
+    return app.send_static_file("index.html")
 
 @app.get("/api/health")
 def health():
@@ -282,6 +286,7 @@ def admin_summary():
     return jsonify({"students":students,"opportunities":opportunities,
                     "applications":applications,"events":events})
 
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     app.run(host="127.0.0.1", port=5000, debug=True)
